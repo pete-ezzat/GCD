@@ -26,8 +26,22 @@ def get_gcd(numbers):
 		for jtem in range(item+1, len(non_list)):
 			if len(non_list[item]) < len(non_list[jtem]):
 				non_list[item], non_list[jtem] = non_list[jtem], non_list[item]
+				
+	# GCD:
+	gcd = 0
+	count = 1
+	great_list = non_list[0]
+	
+	for item in range(0, len(great_list)):
+		for jtem in range(1, len(non_list)):
+			if great_list[item] in non_list[jtem]: count += 1
+		if count == len(non_list):
+			gcd = great_list[item]
+			break
+		count = 1
 
-	print (non_list)
+	#print (non_list)
+	print (gcd)
 	
 #.#.#.
 
