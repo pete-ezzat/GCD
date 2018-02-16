@@ -20,7 +20,13 @@ def get_gcd(numbers):
 	# Sort the numbers inside the list (DSC):
 	for number_list in non_list:
 		number_list.reverse()
-		
+
+	# Arrange NON List by length (DSC):
+	for item in range(0, len(non_list)-1):
+		for jtem in range(item+1, len(non_list)):
+			if len(non_list[item]) < len(non_list[jtem]):
+				non_list[item], non_list[jtem] = non_list[jtem], non_list[item]
+
 	print (non_list)
 	
 #.#.#.
