@@ -2,7 +2,7 @@ def get_divisors(number):
 	divisor = 2
 	numbers_list = []
 	
-	while divisor < number:
+	while divisor <= number:
 		if number % divisor == 0: numbers_list.append(divisor)	
 		divisor += 1
 	
@@ -45,14 +45,16 @@ def get_gcd(numbers):
 	
 #.#.#.
 
-numbers = input("Numbers: ")
-
-while len(numbers) < 2:
-	print("\nNumbers must be more than 1 input.")
+while True:
 	numbers = input("Numbers: ")
 
-# Convert Strings to Ints
-numbers = numbers.split(" ")
-numbers = list(map(int, numbers))
+	while len(numbers) < 2:
+		print("\nNumbers must be more than 1 input.")
+		numbers = input("Numbers: ")
 
-gcd = get_gcd(numbers)
+	# Convert Strings to Ints
+	numbers = numbers.split(" ")
+	numbers = list(map(int, numbers))
+
+	gcd = get_gcd(numbers)
+	print("##################\n")
