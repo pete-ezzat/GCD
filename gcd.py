@@ -1,3 +1,15 @@
+def get_divisors(number):
+	divisor = 2
+	numbers_list = []
+	
+	while divisor < number:
+		if number % divisor == 0: numbers_list.append(divisor)	
+		divisor += 1
+	
+	return numbers_list
+
+#.#.#.
+
 def get_gcd(numbers):
 	
 	pass
@@ -14,6 +26,7 @@ while len(numbers) < 2:
 numbers = numbers.split(" ")
 numbers = list(map(int, numbers))
 
-print(numbers)
+for number in numbers:
+	print(number, ": ", get_divisors(number))
 
 #gcd = get_gcd(numbers)
