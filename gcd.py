@@ -17,7 +17,11 @@ def get_gcd(numbers):
 	for number in numbers:
 		non_list.append(get_divisors(number))
 	
-	print(non_list)
+	# Sort the numbers inside the list (DSC):
+	for number_list in non_list:
+		number_list.reverse()
+		
+	print (non_list)
 	
 #.#.#.
 
