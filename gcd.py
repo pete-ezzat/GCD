@@ -12,7 +12,12 @@ def get_divisors(number):
 
 def get_gcd(numbers):
 	
-	pass
+	non_list = []
+	
+	for number in numbers:
+		non_list.append(get_divisors(number))
+	
+	print(non_list)
 	
 #.#.#.
 
@@ -26,7 +31,4 @@ while len(numbers) < 2:
 numbers = numbers.split(" ")
 numbers = list(map(int, numbers))
 
-for number in numbers:
-	print(number, ": ", get_divisors(number))
-
-#gcd = get_gcd(numbers)
+gcd = get_gcd(numbers)
